@@ -17,9 +17,9 @@ A lightweight, responsive web gallery featuring dynamic category filtering, a se
 
 
 ## 📂 Project Structure
-├── index.html       # Markup for gallery and lightbox modal
-├── style.css        # Layout, custom theme, and inline SVG pattern
-└── script.js        # Filtering logic and modal interaction
+index.html       # Markup for gallery and lightbox modal
+style.css        # Layout, custom theme, and inline SVG pattern
+script.js        # Filtering logic and modal interaction
 
 
 ## 💡 What I Learned
@@ -30,3 +30,4 @@ A lightweight, responsive web gallery featuring dynamic category filtering, a se
 
 ## 🔗 Links
 * **Live Site:** https://swastika2209.github.io/codealpha_tasks1/
+* **Source Code:** https://github.com/swastika2209/codealpha_tasks1
