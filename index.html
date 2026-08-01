@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container">
+    <h1>image gallery</h1>
+    <div class="filter-menu">
+      <button type="button" class="filter-btn active" data-filter="all">All</button>
+      <button type="button" class="filter-btn" data-filter="sky">Sky</button>
+      <button type="button" class="filter-btn" data-filter="architecture">Architecture</button>
+      <button type="button" class="filter-btn" data-filter="nature">Nature</button>
+      <button type="button" class="filter-btn" data-filter="food">Food</button>
+      <button type="button" class="filter-btn" data-filter="urban">Urban</button>
+      <button type="button" class="filter-btn" data-filter="crowd">Crowd</button>
+      <button type="button" class="filter-btn" data-filter="sea">Sea</button>
+      <button type="button" class="filter-btn" data-filter="palace">Palace</button>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid">
+      
+      <div class="gallery-item" data-category="nature">
+        <img src="https://i.redd.it/9i79t8kirt761.jpg" alt="Mountain Lake View" loading="lazy"/>
+        <div class="overlay"><span class="overlay-title">Mountain Lake View</span></div>
+      </div>
+
+      <div class="gallery-item" data-category="food">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT8v8foEPfwGQy7hDVLLQE4E8ZiDYEhugoi7UCU7JcjQ&s=10" alt="Food Items" loading="lazy"/>
+        <div class="overlay"><span class="overlay-title">Popular Food</span></div>
+      </div>
+
+      <div class="gallery-item" data-category="crowd">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/047/064/481/small/a-large-crowd-of-people-at-a-concert-illuminated-by-stage-lights-photo.jpeg" alt="Crowd" loading="lazy"/>
+        <div class="overlay"><span class="overlay-title">Crowd</span></div>
+      </div>
+
+      <div class="gallery-item" data-category="sea">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRueVM4dx3vNWgmUI67ocrEnuJmUswi8z5f7isqgzEoAg&s=10" alt="Beach Ocean View" loading="lazy"/>
+        <div class="overlay"><span class="overlay-title">View of Beach</span></div>
+      </div>
+
+      <div class="gallery-item" data-category="sky">
+        <img src="https://cdn.pixabay.com/photo/2022/03/06/05/30/clouds-7050884_1280.jpg" alt="Sky and Cloud View" loading="lazy"/>
+        <div class="overlay"><span class="overlay-title">Cloud View</span></div>
+      </div>
+
+      <div class="gallery-item" data-category="architecture">
+        <img src="https://media.architecturaldigest.com/photos/5c5db6a68695162977266dda/1:1/w_2000,h_2000,c_limit/CRYGK4.jpg" alt="Modern Architecture" loading="lazy"/>
+        <div class="overlay"><span class="overlay-title">Modern Architecture</span></div>
+      </div>
+
+      <div class="gallery-item" data-category="urban">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/070/485/121/small/close-up-view-of-street-lights-illuminating-a-bridge-at-night-revealing-a-blurred-city-backdrop-photo.jpg" alt="City Street Lights" loading="lazy"/>
+        <div class="overlay"><span class="overlay-title">City Street Lights</span></div>
+      </div>
+
+      <div class="gallery-item" data-category="palace">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp5OR_dWFRxh72DiKavfWfeRzhnP6DEIDvbsLc_uTKyw&amp;s=10" alt="Royal Palace View" loading="lazy"/>
+        <div class="overlay"><span class="overlay-title">Palace</span></div>
+      </div>
+
+      <div class="gallery-item" data-category="nature">
+        <img src="https://picsum.photos/id/1028/800/600" alt="Misty Forest" loading="lazy"/>
+        <div class="overlay"><span class="overlay-title">Misty Forest</span></div>
+      </div>
+
+      <div class="gallery-item" data-category="architecture">
+        <img src="https://images.stockcake.com/public/d/b/8/db8573a4-ae0b-48d1-ac98-a4298b9d45be_large/elegant-classical-archway-stockcake.jpg" alt="Classic Archway" loading="lazy"/>
+        <div class="overlay"><span class="overlay-title">Classic Archway</span></div>
+      </div>
+
+      <div class="gallery-item" data-category="urban">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcsIwUQ6IkgrTtZOkWSnTbWx9aMJw9Z6iOlm9mj_Zv5A&s=10" alt="Downtown Skyline" loading="lazy"/>
+        <div class="overlay"><span class="overlay-title">Downtown Skyline</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-content">
+      <button type="button" class="close-btn" id="closeBtn" aria-label="Close gallery">&times;</button>
+      <button type="button" class="nav-btn prev-btn" id="prevBtn" aria-label="Previous image">&#10094;</button>
+      <img src="" alt="" class="lightbox-img" id="lightboxImg" />
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+      <button type="button" class="nav-btn next-btn" id="nextBtn" aria-label="Next image">&#10095;</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
