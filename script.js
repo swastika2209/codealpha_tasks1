@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   }
 
-  // --- Category Filtering ---
+  // Category Filtering 
   filterBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
       filterBtns.forEach((b) => b.classList.remove("active"));
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // --- Lightbox Logic ---
+  // Lightbox Logic
   function openLightbox(index) {
     if (!currentVisibleItems.length || !currentVisibleItems[index]) return;
 
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
     openLightbox(currentIndex);
   }
 
-  // --- Event Listeners ---
+
   galleryItems.forEach((item) => {
     item.addEventListener("click", () => {
       updateVisibleItems();
@@ -105,7 +105,40 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.key === "ArrowRight") showNext();
     if (e.key === "ArrowLeft") showPrev();
   });
-
-  // Initial populate
   updateVisibleItems();
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+  const squareImg = new Image();
+  squareImg.src = 'icon.jpeg'; 
+  squareImg.crossOrigin = 'Anonymous';
+  squareImg.onload = () => {
+    const canvas = document.createElement('canvas');
+    const size = 64; 
+    canvas.width = size;
+    canvas.height = size;
+    const ctx = canvas.getContext('2d');
+
+    //favicon
+    ctx.beginPath();
+    ctx.arc(size / 2, size / 2, size / 2, 0, Math.PI * 2);
+    ctx.closePath();
+    ctx.clip();
+    ctx.drawImage(squareImg, 0, 0, size, size);
+
+    let favicon = document.getElementById('favicon');
+    
+    if (!favicon) {
+      favicon = document.createElement('link');
+      favicon.id = 'favicon';
+      favicon.rel = 'icon';
+      document.head.appendChild(favicon);
+    }
+    
+    favicon.href = canvas.toDataURL('image/png');
+  };
+
+  squareImg.onerror = () => {
+    console.error('Failed to load image at path:', squareImg.src);
+  };
 });
