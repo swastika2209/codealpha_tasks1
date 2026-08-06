@@ -29,5 +29,5 @@ script.js        # Filtering logic and modal interaction
 
 
 ## 🔗 Links
-* **Live Site:** https://swastika2209.github.io/codealpha_tasks1/
+* **Live Site:** https://swastika2209.github.io/imageGallery/
 * **Source Code:** https://github.com/swastika2209/codealpha_tasks1
